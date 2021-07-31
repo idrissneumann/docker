@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  todo_db:
+    image: postgres:9.4
+    container_name: todo_db
+    restart: always
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_PASSWORD=todo_passwd_456
+      - POSTGRES_USER=todo
+      - POSTGRES_DB=todo
+    volumes:
+      - ./data_volume:/var/lib/postgresql/data:z
+    networks:
+      - todo_api
+    ports:
+      - 5435:5432
+  todo_api_python:
+    image: harbor.comwork.io/todoapi/python:latest
+    container_name: todo_api
+    restart: always
+    networks:
+      - todo_api
+    depends_on: 
+      - todo_db
+  todo_unit_tests:
+    image: harbor.comwork.io/todoapi/unittest:latest
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: todo_unit_tests
+
+networks:
+  todo_api:
+    driver: bridge
