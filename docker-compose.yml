@@ -24,13 +24,6 @@ services:
       - todo_api
     depends_on: 
       - todo_db
-  todo_unit_tests:
-    image: harbor.comwork.io/todoapi/unittest:latest
-    restart: always
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-      target: todo_unit_tests
 
 networks:
   todo_api:
