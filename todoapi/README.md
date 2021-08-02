@@ -1,15 +1,9 @@
 # Todo API
 
-Une api restful permettant de remplir une TODO List.
-Cette api est écrite en plusieurs versions avec différents langages et est inspirée par les repos suivants:
+Une api restful permettant de remplir une TODO List écrite en plusieurs langages.
 
-* [Pour la version python](https://github.com/paulodhiambo/flaskcrudapi)
-* [Pour la version java](https://github.com/paulodhiambo/springbootcrud)
-
-Elles ont été modifiées afin d'être:
-* d'être un mieux découpée en couche et donc testables unitairement
-* de fonctionner avec la même base de données PostgreSQL
-* de fonctionner exactement avec les mêmes contrats de service
+* [Version Java](./java)
+* [Version Python](./python)
 
 ## Table des matières
 
