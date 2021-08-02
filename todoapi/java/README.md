@@ -2,7 +2,7 @@
 
 Une api restful écrite en Java (Springboot) permettant de remplir une TODO List.
 
-Cette api est écrite en plusieurs versions avec différents langages et est inspirée par ce [repo](https://github.com/paulodhiambo/springbootcrud).
+Cette api est écrite en plusieurs versions avec différents langages et est inspirée par ce [repo](https://github.com/paulodhiambo/flaskcrudapi).
 
 Elles a été modifiée afin d'être:
 * de fonctionner avec la même base de données PostgreSQL (ce qui permettra d'utiliser la même bdd que les autres versions écrites dans d'autres langages)
