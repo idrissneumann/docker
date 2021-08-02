@@ -1,6 +1,7 @@
 package io.comwork.todo.api.controllers;
 
 import io.comwork.todo.api.model.Todo;
+import io.comwork.todo.api.model.Todos;
 import io.comwork.todo.api.services.TodoService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,8 +20,8 @@ public class TodoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Todo>> getAllTodos() {
-        List<Todo> todos = todoService.getTodos();
+    public ResponseEntity<Todos> getAllTodos() {
+        Todos todos = todoService.getTodos();
         return new ResponseEntity<>(todos, HttpStatus.OK);
     }
     

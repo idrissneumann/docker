@@ -1,11 +1,12 @@
 package io.comwork.todo.api.services;
 
 import io.comwork.todo.api.model.Todo;
+import io.comwork.todo.api.model.Todos;
 
 import java.util.List;
 
 public interface TodoService {
-    List<Todo> getTodos();
+    Todos getTodos();
 
     Todo getTodoById(Long id);
 

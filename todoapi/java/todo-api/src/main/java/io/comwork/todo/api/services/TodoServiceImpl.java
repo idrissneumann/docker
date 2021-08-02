@@ -1,6 +1,7 @@
 package io.comwork.todo.api.services;
 
 import io.comwork.todo.api.model.Todo;
+import io.comwork.todo.api.model.Todos;
 import io.comwork.todo.api.repositories.TodoRepository;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +17,10 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public List<Todo> getTodos() {
+    public Todos getTodos() {
         List<Todo> todos = new ArrayList<>();
         todoRepository.findAll().forEach(todos::add);
-        return todos;
+        return Todos.builder().todos(todos).build();
     }
 
     @Override

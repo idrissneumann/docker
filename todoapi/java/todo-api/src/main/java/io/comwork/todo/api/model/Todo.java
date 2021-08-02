@@ -1,11 +1,10 @@
 package io.comwork.todo.api.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "todos")
@@ -32,6 +30,7 @@ public class Todo {
     @Column
     String title;
 
+    @JsonProperty("todo_description")
     @Column(name = "todo_description")
     String todoDescription;
 }
