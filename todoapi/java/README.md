@@ -23,7 +23,7 @@ mvn clean install
 3. Démarrez l'application
 
 ```shell
-java -jar todo-api-fat.jar
+java -jar target/todo-api-0.0.1-SNAPSHOT.jar
 ```
 
 4. Testez: [rendez-vous ici](../README.md)

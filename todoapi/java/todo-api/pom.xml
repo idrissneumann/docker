@@ -23,15 +23,6 @@
             <name>Central Maven repository https</name>
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
-
-        <repository>
-            <id>testing-toolbox-mvn-repo</id>
-            <url>https://raw.github.com/testing-toolbox/testing-toolbox-core/mvn-repo/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
     </repositories>
     <dependencies>
         <dependency>

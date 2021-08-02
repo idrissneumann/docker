@@ -9,6 +9,13 @@ Une api restful permettant de remplir une TODO List écrite en plusieurs langage
 
 [[_TOC_]]
 
+## Lancez la base de données
+
+```shell
+docker-compose up -d todo_db
+docker exec -it todo_db psql -U todo todo -c "\i /install.sql"
+```
+
 ## Les endpoints
 
 ### Enregistrer une entrée via l'api

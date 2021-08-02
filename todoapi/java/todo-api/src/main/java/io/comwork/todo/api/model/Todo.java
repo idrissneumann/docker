@@ -11,9 +11,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.sql.Timestamp;
 
 @Entity
+@Table(name = "todos")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,17 +25,20 @@ public class Todo {
     @GeneratedValue
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
     Long id;
+
     @Column
     String title;
+
     @Column
     String description;
+
     @Column
     TodoStatus todoStatus;
 
     @CreationTimestamp
     @Column(updatable = false)
     Timestamp dateCreated;
+
     @UpdateTimestamp
     Timestamp lastModified;
-
 }
