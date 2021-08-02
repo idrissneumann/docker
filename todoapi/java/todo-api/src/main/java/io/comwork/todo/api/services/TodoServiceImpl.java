@@ -1,7 +1,7 @@
-package io.comwork.todoapi.services;
+package io.comwork.todo.api.services;
 
-import io.comwork.todoapi.model.Todo;
-import io.comwork.todoapi.repositories.TodoRepository;
+import io.comwork.todo.api.model.Todo;
+import io.comwork.todo.api.repositories.TodoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package io.comwork.todoapi.model;
+package io.comwork.todo.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

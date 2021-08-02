@@ -1,7 +1,7 @@
-package io.comwork.todoapi.controllers;
+package io.comwork.todo.api.controllers;
 
-import io.comwork.todoapi.model.Todo;
-import io.comwork.todoapi.services.TodoService;
+import io.comwork.todo.api.model.Todo;
+import io.comwork.todo.api.services.TodoService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

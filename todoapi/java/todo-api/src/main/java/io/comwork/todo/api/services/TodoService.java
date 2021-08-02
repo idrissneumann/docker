@@ -1,6 +1,6 @@
-package io.comwork.todoapi.services;
+package io.comwork.todo.api.services;
 
-import io.comwork.todoapi.model.Todo;
+import io.comwork.todo.api.model.Todo;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package io.comwork.todoapi;
+package io.comwork.todo.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
