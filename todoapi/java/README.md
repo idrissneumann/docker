@@ -11,7 +11,6 @@ Elles a été modifiée afin d'être:
 ## Table des matières
 
 [[_TOC_]]
-
 ## Démarrer l'application en local
 
 1. Installer Java OpenJDK 11 et maven >= 3.5
@@ -24,6 +23,7 @@ mvn clean install
 3. Démarrez l'application
 
 ```shell
-java -jar 
+java -jar todo-api-fat.jar
+```
 
 4. Testez: [rendez-vous ici](../README.md)
