@@ -22,7 +22,7 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@SequenceGenerator(name = "todos_seq_generator", sequenceName = "todos_id_seq")
+@SequenceGenerator(name = "todos_seq_generator", sequenceName = "todos_id_seq", allocationSize = 1)
 public class Todo {
     @Id
     @Column
@@ -32,16 +32,6 @@ public class Todo {
     @Column
     String title;
 
-    @Column
-    String description;
-
-    @Column
-    TodoStatus todoStatus;
-
-    @CreationTimestamp
-    @Column(updatable = false)
-    Timestamp dateCreated;
-
-    @UpdateTimestamp
-    Timestamp lastModified;
+    @Column(name = "todo_description")
+    String todoDescription;
 }

@@ -1,7 +1,6 @@
 package io.comwork.todo.api.bootstrap;
 
 import io.comwork.todo.api.model.Todo;
-import io.comwork.todo.api.model.TodoStatus;
 import io.comwork.todo.api.repositories.TodoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -24,15 +23,13 @@ public class TodoLoader implements CommandLineRunner {
             todoRepository.save(
                     Todo.builder()
                             .title("Go to market")
-                            .description("Buy eggs from market")
-                            .todoStatus(TodoStatus.NOT_COMPLETED)
+                            .todoDescription("Buy eggs from market")
                             .build()
             );
             todoRepository.save(
                     Todo.builder()
                             .title("Go to school")
-                            .description("Complete assignments")
-                            .todoStatus(TodoStatus.NOT_COMPLETED)
+                            .todoDescription("Complete assignments")
                             .build()
             );
             System.out.println("Sample Todos Loaded");

@@ -36,8 +36,7 @@ public class TodoServiceImpl implements TodoService {
     public void updateTodo(Long id, Todo todo) {
         Todo todoFromDb = todoRepository.findById(id).get();
         System.out.println(todoFromDb.toString());
-        todoFromDb.setTodoStatus(todo.getTodoStatus());
-        todoFromDb.setDescription(todo.getDescription());
+        todoFromDb.setTodoDescription(todo.getTodoDescription());
         todoFromDb.setTitle(todo.getTitle());
         todoRepository.save(todoFromDb);
     }
