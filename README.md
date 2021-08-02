@@ -22,10 +22,10 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 ## Cas pratique
 
 1. Créer le Dockerfile qui contiendra la création des images des différentes versions de l'[api todo](./todoapi) écrits dans différents langages en traitant les langages dans cet ordre:
-** Version bash
-** Version python
-** Version java
-** Version php
+  * Version bash
+  * Version python
+  * Version java
+  * Version php
 
 2. Dockeriser aussi la partie frontend
 
