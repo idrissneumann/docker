@@ -16,7 +16,7 @@ services:
     networks:
       - todo_api
     ports:
-      - 5435:5432
+      - 5436:5432
       
 networks:
   todo_api:

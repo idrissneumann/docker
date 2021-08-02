@@ -10,7 +10,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import java.sql.Timestamp;
 
@@ -20,10 +22,11 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@SequenceGenerator(name = "todos_seq_generator", sequenceName = "todos_id_seq")
 public class Todo {
     @Id
-    @GeneratedValue
-    @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
+    @Column
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "todos_seq_generator")
     Long id;
 
     @Column

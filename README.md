@@ -21,14 +21,20 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 
 ## Cas pratique
 
-1. Créer le Dockerfile qui contiendra la création des images des différentes versions de l'[api todo](./todoapi) écrits dans différents langages en traitant les langages dans cet ordre:
+1. Utilisez une image openJDK du docker-hub déjà prête qui vous permettra de démarrer l'app la version java de l'[api todo](./todoapi) que vous aurez préalablement compilé
+
+2. Créer le Dockerfile qui contiendra la création des images des différentes versions de l'[api todo](./todoapi) écrits dans différents langages en traitant les langages dans cet ordre:
   * Version bash
   * Version python
   * Version java
   * Version php
 
-2. Dockeriser aussi la partie frontend
+Vous devez rendre les applications cloud native. Par exemple l'application java se configure avec un fichier [application.properties](todoapi/java/todo-api/src/main/resources/application.properties), en la transformant en conteneur il faut que chaque élément du fichier de configuration puisse être remplacé ou surchargé par une variable d'environnement.
 
-3. Ajouter dans le Dockerfile une stage pour lancer les tests unitaires facilement pour la version Python
+Exemple: `server.port=5000` doit pouvoir se configurer avec une variable d'environnement `$SERVER_PORT` qu'on pourra ensuite surcharger dans le fichier `docker-compose.yaml`.
+
+3. Dockeriser aussi la partie frontend
+
+4. Ajouter dans le Dockerfile une stage pour lancer les tests unitaires facilement pour la version Python
 
 5. Mettre en place un pipeline CI/CD qui va permettre d'automatiser la création et la livraison des conteneurs sur notre registry https://harbor.comwork.io
