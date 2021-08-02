@@ -7,7 +7,6 @@ Cette api est écrite en plusieurs versions avec différents langages et est ins
 Elles a été modifiée afin d'être:
 * de fonctionner avec la même base de données PostgreSQL (ce qui permettra d'utiliser la même bdd que les autres versions écrites dans d'autres langages)
 * d'être mieux découpée en couche afin de rendre ces différentes couches testables unitairement avec des mocks
-* d'avoir une meilleure gestion des dépendances
 
 ## Table des matières
 
