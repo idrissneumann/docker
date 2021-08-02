@@ -1,7 +1,7 @@
-package com.odhiambopaul.demo.controllers;
+package io.comwork.todoapi.controllers;
 
-import com.odhiambopaul.demo.model.Todo;
-import com.odhiambopaul.demo.services.TodoService;
+import io.comwork.todoapi.model.Todo;
+import io.comwork.todoapi.services.TodoService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.odhiambopaul.demo.services;
+package io.comwork.todoapi.services;
 
-import com.odhiambopaul.demo.model.Todo;
+import io.comwork.todoapi.model.Todo;
 
 import java.util.List;
 

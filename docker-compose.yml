@@ -16,15 +16,7 @@ services:
       - todo_api
     ports:
       - 5435:5432
-  todo_api_python:
-    image: harbor.comwork.io/todoapi/python:latest
-    container_name: todo_api
-    restart: always
-    networks:
-      - todo_api
-    depends_on: 
-      - todo_db
-
+      
 networks:
   todo_api:
     driver: bridge

@@ -1,4 +1,4 @@
-package com.odhiambopaul.demo.model;
+package io.comwork.todoapi.model;
 
 public enum TodoStatus {
     COMPLETED, NOT_COMPLETED

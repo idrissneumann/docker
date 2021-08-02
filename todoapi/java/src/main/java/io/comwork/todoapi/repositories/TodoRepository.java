@@ -1,6 +1,6 @@
-package com.odhiambopaul.demo.repositories;
+package io.comwork.todoapi.repositories;
 
-import com.odhiambopaul.demo.model.Todo;
+import io.comwork.todoapi.model.Todo;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

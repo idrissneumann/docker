@@ -1,4 +1,4 @@
-package com.odhiambopaul.demo;
+package io.comwork.todoapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

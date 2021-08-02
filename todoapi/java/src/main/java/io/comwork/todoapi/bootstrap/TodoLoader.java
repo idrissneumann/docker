@@ -1,8 +1,8 @@
-package com.odhiambopaul.demo.bootstrap;
+package io.comwork.todoapi.bootstrap;
 
-import com.odhiambopaul.demo.model.Todo;
-import com.odhiambopaul.demo.model.TodoStatus;
-import com.odhiambopaul.demo.repositories.TodoRepository;
+import io.comwork.todoapi.model.Todo;
+import io.comwork.todoapi.model.TodoStatus;
+import io.comwork.todoapi.repositories.TodoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
