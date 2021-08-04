@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+body {
+    padding: 20px;
+}
+.front-form{
+    width : 200px;
+    margin: auto;
+    margin-top:25px;
+    margin-bottom:50px;
+}
+.front-btn{
+    cursor: pointer;
+    color: #777;
+}
+.front-btn:hover{
+    color: red;
+}
