@@ -75,3 +75,31 @@ $router->post('/api/v1/todo', function (Request $request) use ($router) {
 
     return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
 });
+
+$router->put('/api/v1/todo/{id}', function ($id, Request $request) use ($router) {
+    $title = $request->json()->get('title');
+    $desc = $request->json()->get('todo_description');
+
+    $lines = app('db')->select("SELECT id, title, todo_description FROM todos WHERE id = ?", [$id]);
+
+    foreach ($lines as $line) {
+        $result = array(
+            'id' => $line->id,
+            'title' => $line->title,
+            'todo_description' => $line->todo_description
+        );
+        
+        if ($title) {
+            $result['title'] = $title;
+        }
+
+        if ($desc) {
+            $result['todo_description'] = $desc;
+        }
+
+        app('db')->update('UPDATE todos SET title = ?, todo_description = ? WHERE id = ?', [$result['title'], $result['todo_description'], $id]);
+        return json_encode($result, true);
+    }
+
+    return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
+});
