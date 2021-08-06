@@ -103,3 +103,14 @@ $router->put('/api/v1/todo/{id}', function ($id, Request $request) use ($router)
 
     return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
 });
+
+$router->delete('/api/v1/todo/{id}', function ($id) use ($router) {
+    $lines = app('db')->select("SELECT id, title, todo_description FROM todos WHERE id = ?", [$id]);
+
+    foreach ($lines as $line) {
+        app('db')->delete('DELETE FROM todos WHERE id = ?', [$id]);
+        return (new Response(null, 204));
+    }
+
+    return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
+});
