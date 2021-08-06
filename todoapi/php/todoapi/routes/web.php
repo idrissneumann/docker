@@ -39,7 +39,6 @@ $router->get('/api/v1/todo', function () use ($router) {
 
 $router->get('/api/v1/todo/{id}', function ($id) use ($router) {
     $lines = app('db')->select("SELECT id, title, todo_description FROM todos WHERE id = ?", [$id]);
-    $result = array();
 
     foreach ($lines as $line) {
         $result = array(
@@ -50,16 +49,19 @@ $router->get('/api/v1/todo/{id}', function ($id) use ($router) {
         return json_encode($result, true);
     }
 
-    return (new Response($result, 404))->header('Content-Type', 'application/json');
+    return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
 });
 
 $router->post('/api/v1/todo', function (Request $request) use ($router) {
     $title = $request->json()->get('title');
     $desc = $request->json()->get('todo_description');
 
+    if (! $title || ! $desc) {
+        return (new Response(array('status' => 400, 'message' => 'missing mandatory parameter: title or todo_description'), 400))->header('Content-Type', 'application/json');
+    }
+
     app('db')->insert("INSERT INTO todos(title, todo_description) VALUES (?, ?)", [$title, $desc]);
     $lines = app('db')->select("SELECT id, title, todo_description FROM todos WHERE title = ? AND todo_description = ? AND id IN (SELECT MAX(id) FROM todos WHERE title = ? AND todo_description = ?)", [$title, $desc, $title, $desc]);
-    $result = array();
 
     foreach ($lines as $line) {
         $result = array(
@@ -71,5 +73,5 @@ $router->post('/api/v1/todo', function (Request $request) use ($router) {
         return (new Response($result, 201))->header('Content-Type', 'application/json');
     }
 
-    return (new Response($result, 404))->header('Content-Type', 'application/json');
+    return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
 });
