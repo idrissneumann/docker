@@ -21,5 +21,5 @@ brew install composer
 ```shell
 export PATH=/opt/homebrew/Cellar/php/8.0.9/bin/:$PATH # pour mac OS bigsur
 composer install
-php -S localhost:5000 -t public
+php -S 0.0.0.0:5000 -t public
 ```
