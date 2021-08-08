@@ -4,6 +4,10 @@
 
 [[_TOC_]]
 
+## Documentation
+
+Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./Formation sur docker.pdf).
+
 ## Pré-requis
 
 ### Dépendances à installer
