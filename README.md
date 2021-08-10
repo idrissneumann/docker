@@ -25,6 +25,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 
 ## Cas pratique
 
+0. Tout votre travail devra être pushé sur git avec une branche `main_{votre nom}` et ouvrir une merge request vers la branche `main`
+
 1. Utilisez une image openJDK du docker-hub déjà prête qui vous permettra de démarrer l'app la version java de l'[api todo](./todoapi) que vous aurez préalablement compilé
 
 2. Créer le Dockerfile qui contiendra la création des images des différentes versions de l'[api todo](./todoapi) écrits dans différents langages en traitant les langages dans cet ordre:
