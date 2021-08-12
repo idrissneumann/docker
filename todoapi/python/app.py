@@ -37,12 +37,12 @@ def index():
 
 @app.route('/api/v1/todo/<id>', methods=['GET'])
 def get_todo_by_id(id):
-    return make_response(jsonify({"todo": repository.get(id)}))
+    return make_response(jsonify(repository.get(id)))
 
 @app.route('/api/v1/todo/<id>', methods=['PUT'])
 def update_todo_by_id(id):
     data = httputils.get_json_body()
-    return make_response(jsonify({"todo": repository.update(id, data)}))
+    return make_response(jsonify(repository.update(id, data)))
 
 @app.route('/api/v1/todo/<id>', methods=['DELETE'])
 def delete_todo_by_id(id):
@@ -52,7 +52,7 @@ def delete_todo_by_id(id):
 @app.route('/api/v1/todo', methods=['POST'])
 def create_todo():
     data = httputils.get_json_body()
-    return make_response(jsonify({"todo": repository.insert(data)}), 200)
+    return make_response(jsonify(repository.insert(data)), 200)
 
 if __name__ == "__main__":
     app.run(debug=False, host=host, port=port)

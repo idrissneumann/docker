@@ -16,15 +16,16 @@
         {
             $headers = [
                 'Access-Control-Allow-Origin'      => '*',
-                'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
+                'Access-Control-Allow-Methods'     => 'HEAD, GET, POST, PUT, PATCH, DELETE, OPTIONS',
                 'Access-Control-Allow-Credentials' => 'true',
                 'Access-Control-Max-Age'           => '86400',
-                'Access-Control-Allow-Headers'     => 'Content-Type, Authorization, X-Requested-With'
+                'Access-Control-Allow-Headers'     => $request->header('Access-Control-Request-Headers'),
+                'Access-Control-Expose-Headers'    => 'Location'
             ];
 
             if ($request->isMethod('OPTIONS'))
             {
-                return response()->json('{"method":"OPTIONS"}', 200, $headers);
+                return response()->json('', 204, $headers);
             }
 
             $response = $next($request);

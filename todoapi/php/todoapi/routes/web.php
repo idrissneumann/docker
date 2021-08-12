@@ -22,12 +22,12 @@ $router->get('/', function () use ($router) {
 
 $router->get('/api/v1/todo', function () use ($router) {
     $result = array (
-        'todo' => []
+        'todos' => []
     );
 
     $lines = app('db')->select("SELECT id, title, todo_description FROM todos LIMIT 1000");
     foreach ($lines as $line) {
-        array_push($result['todo'], array(
+        array_push($result['todos'], array(
             'id' => $line->id,
             'title' => $line->title,
             'todo_description' => $line->todo_description
