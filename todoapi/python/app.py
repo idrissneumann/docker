@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, make_response
+from flask_cors import CORS
 from todo_repository import TodoRepository
 from http_utils import HttpUtils
 
@@ -11,14 +12,19 @@ global port
 app = None
 host = None
 port = None
+cors = None
 
 def init_app():
     global app 
     global host
     global port
+    global cors
 
     if app is None:
         app = Flask(__name__)
+
+    if cors is None:
+        cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     if host is None:
         host = os.environ['API_PYTHON_HOST']
