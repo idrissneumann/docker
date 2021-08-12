@@ -34,7 +34,7 @@ $router->get('/api/v1/todo', function () use ($router) {
         ));
     }
 
-    return json_encode($result, true);
+    return (new Response($result, 200))->header('Content-Type', 'application/json');
 });
 
 $router->get('/api/v1/todo/{id}', function ($id) use ($router) {
@@ -46,7 +46,8 @@ $router->get('/api/v1/todo/{id}', function ($id) use ($router) {
             'title' => $line->title,
             'todo_description' => $line->todo_description
         );
-        return json_encode($result, true);
+
+        return (new Response($result, 200))->header('Content-Type', 'application/json');
     }
 
     return (new Response(array('status' => 404, 'message' => 'ressource not found'), 404))->header('Content-Type', 'application/json');
