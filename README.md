@@ -8,6 +8,12 @@
 
 Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./Formation sur docker.pdf).
 
+## Dépôts de sources
+
+* Repo principal : https://gitlab.comwork.io/comwork_training/docker
+* Miroir github : https://github.com/idrissneumann/docker.git
+* Miroir gitlab : https://gitlab.com/ineumann/docker.git
+
 ## Pré-requis
 
 ### Dépendances à installer
