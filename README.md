@@ -8,6 +8,10 @@
 
 Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./Formation sur docker.pdf).
 
+La formation est également disponible en vidéo sur YouTube:
+* Partie 1: https://youtu.be/z1l3DWGMXek
+* Partie 2: https://youtu.be/3WUXtLvoEoE
+
 ## Dépôts de sources
 
 * Repo principal : https://gitlab.comwork.io/comwork_training/docker
