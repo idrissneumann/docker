@@ -52,4 +52,4 @@ Exemple: `server.port=5000` doit pouvoir se configurer avec une variable d'envir
 
 4. Ajouter dans le Dockerfile une stage pour lancer les tests unitaires facilement pour la version Python
 
-5. Mettre en place un pipeline CI/CD qui va permettre d'automatiser la création et la livraison des conteneurs sur notre registry https://harbor.comwork.io
+5. Mettre en place un pipeline CI/CD qui va permettre d'automatiser la création et la livraison des conteneurs sur une registry publique comme dockerhub
