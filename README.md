@@ -4,6 +4,17 @@
 
 [[_TOC_]]
 
+## Périmètre
+
+Dans cette formation vous apprendrez à écrire des Dockerfiles optimisés pour les technologies suivantes :
+
+* API/microservice Restful en Java SpringBoot avec une base de données PostgreSQL
+* API/microservice Restful en Python Flask avec une base de données PostgreSQL
+* API/microservice Restful en PHP fpm avec le framework Laravel / Lumen avec une base de données PostgreSQL
+* Frontend Typescript avec le framework Angular
+
+Et comment faire de la CI/CD pour pusher des images immutables et "production ready".
+
 ## Documentation
 
 Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./Formation sur docker.pdf).
