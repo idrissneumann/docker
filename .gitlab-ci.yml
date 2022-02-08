@@ -1,6 +1,5 @@
 stages:
   - mirror
-  - publish
 
 mirror:
   stage: mirror
@@ -9,4 +8,4 @@ mirror:
   only:
     - /^(main.*)$/
   tags:
-    - comwork-training
+    - mirror

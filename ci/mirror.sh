@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_PATH="/home/centos/training_docker/"
+REPO_PATH="${PROJECT_HOME}/docker/"
 
 cd "${REPO_PATH}" && git pull origin main || :
 git push github main 
