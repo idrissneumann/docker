@@ -28,6 +28,7 @@ La formation est également disponible en vidéo sur YouTube:
 * Repo principal : https://gitlab.comwork.io/comwork_training/docker
 * Miroir github : https://github.com/idrissneumann/docker.git
 * Miroir gitlab : https://gitlab.com/ineumann/docker.git
+* Miroir bitbucket : https://bitbucket.org/idrissneumann/docker.git
 
 ## Pré-requis
 
