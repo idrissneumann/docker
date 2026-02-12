@@ -17,7 +17,7 @@ Et comment faire de la CI/CD pour pusher des images immutables et "production re
 
 ## Documentation
 
-Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./Formation sur docker.pdf).
+Vous pourrez trouver tout les détails nécéssaires (commandes, etc) dans les [slides de la formation](./slides.pdf).
 
 La formation est également disponible en vidéo sur YouTube:
 * Partie 1: https://youtu.be/z1l3DWGMXek
